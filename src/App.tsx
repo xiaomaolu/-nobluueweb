@@ -8,6 +8,7 @@ import { AppProvider } from './AppContext';
 import { TopControls } from './components/TopControls';
 import { Home } from './pages/Home';
 import { VibeCoding } from './pages/VibeCoding';
+import { Blunote } from './pages/Blunote';
 import { SunlitLayer } from './components/SunlitLayer';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ai-life/vibe-coding" element={<VibeCoding />} />
+          <Route path="/blunote" element={<Blunote />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

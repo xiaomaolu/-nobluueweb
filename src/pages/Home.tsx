@@ -86,14 +86,14 @@ export function Home() {
                   <span className="ai-sub">Chrome extension</span>
                 </Link>
 
-                <a className="ai-item" href="https://github.com/xiaomaolu/blunote-updates" target="_blank" rel="noopener noreferrer">
+                <Link className="ai-item" to="/blunote">
                   <div className="ai-icon-wrap" style={{ background: 'rgba(36,65,255,0.08)', borderColor: 'rgba(36,65,255,0.20)' }}>
                     {ICON_BLUNOTE}
                   </div>
                   <span className="ai-name">Blunote</span>
                   <span className="ai-sub">{t('Silent Digital Garden App', '静谧数字花园应用')}</span>
                   <span className="ai-platform" style={{ fontSize: '9px', color: 'var(--text3)', letterSpacing: '0.04em', fontFamily: "'JetBrains Mono',monospace", marginTop: '-4px' }}>macOS / Windows</span>
-                </a>
+                </Link>
 
                 <div className="ai-item empty">
                   <div className="ai-icon-wrap">
