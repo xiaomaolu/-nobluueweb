@@ -56,6 +56,18 @@ export function Blunote() {
         </div>
 
         <div className="d-card">
+          <div className="label">{t('Support', '技术支持')}</div>
+          <Link to="/blunote/support" className="ai-item" style={{ textDecoration: 'none', padding: '12px', display: 'flex', alignItems: 'center', gap: '12px', width: '100%', boxSizing: 'border-box' }}>
+            <span style={{ fontSize: '18px' }}>💬</span>
+            <div style={{ textAlign: 'left' }}>
+              <div className="ai-name" style={{ marginBottom: '2px' }}>Blunote Support</div>
+              <div className="ai-sub">note@nobluue.com</div>
+            </div>
+            <span style={{ marginLeft: 'auto', color: 'var(--text3)', fontSize: '14px' }}>›</span>
+          </Link>
+        </div>
+
+        <div className="d-card">
           <div className="label">{t('Privacy Policy', '隐私政策')}</div>
           <div className="privacy" style={{ fontSize: '12px', color: 'var(--text2)', lineHeight: 1.7 }}>
             {language === 'en' ? (

@@ -26,7 +26,7 @@ export function VibeCoding() {
         <div className="d-hero">
           <div className="d-hero-icon">{ICON_NOTION}</div>
           <div>
-            <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: '4px' }}>Vibe Coding</div>
+            <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', color: 'var(--text3)', marginBottom: '4px' }}>Vibe Coding</div>
             <div className="d-hero-title" style={{ fontFamily: "'Lora', serif", fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', marginBottom: '6px' }}>Notion Website Clipper</div>
             <div className="d-hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--blue)', background: 'var(--blue-soft)', borderRadius: '20px', padding: '2px 9px' }}>
               <span className="d-live-dot" style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--green)' }}></span>

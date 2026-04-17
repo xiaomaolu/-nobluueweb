@@ -76,7 +76,7 @@ export function Home() {
                 AI Life
               </div>
 
-              <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: '10px' }}>
+              <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.10em', color: 'var(--text3)', marginBottom: '10px' }}>
                 Vibe Coding
               </div>
               <div className="ai-grid">
@@ -94,6 +94,19 @@ export function Home() {
                   <span className="ai-sub">{t('Silent Digital Garden App', '静谧数字花园应用')}</span>
                   <span className="ai-platform" style={{ fontSize: '9px', color: 'var(--text3)', letterSpacing: '0.04em', fontFamily: "'JetBrains Mono',monospace", marginTop: '-4px' }}>macOS / Windows</span>
                 </Link>
+
+                <a className="ai-item" href="https://www.figma.com/community/plugin/1445266488816121265" target="_blank" rel="noopener noreferrer">
+                  <div className="ai-icon-wrap" style={{ overflow: 'hidden' }}>
+                    <img 
+                      src="https://s3-figma-plugin-images-production-sig.figma.com/plugins/carousel/img/1445266488816121265/18ae7273676b9a3ff122302b2a24f21e99847fc5?Expires=1777248000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZXViFWVnwNjXdQAY8bCSBZjOtbqdLp-jn-FnSi0tE9tN5TlE1AFTgNgjh3e6GChWBwI5Q15RQUXbTuFcaU-OxMLs3ICbQ-kulY3d1UUINNyjoLCSkdTwQ1cKFXyO6sBz6ezo1m5FKz60zk9XlbuF8rkdrB4tE~FW2U25uvm6404IygZRS5izxEcgvt-NfRhsGKLPX-8oiP7--6bubC9hZYoQ4P5-tdxNueeHlSx7MwhLMEq2AxjbHmgpJnwjxHW2WBSyTklWz0ZZEz-Resepo4utSf7eC6LO7irtcSMRPytNydMzpLjXJruGMHT85IjGv-DAXFeK9k2~oslB5stiOA__" 
+                      alt="DateTime Inserter icon" 
+                      referrerPolicy="no-referrer"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+                  <span className="ai-name">DateTime Inserter</span>
+                  <span className="ai-sub" title="A simple personal use plugin for inserting date and time. It helps determine the creation time of each component on the Page.">Figma Plugin</span>
+                </a>
 
                 <div className="ai-item empty">
                   <div className="ai-icon-wrap">
