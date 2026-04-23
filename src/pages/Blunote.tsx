@@ -36,23 +36,80 @@ export function Blunote() {
 
         <div className="d-card">
           <div className="label">{t('Downloads', '软件下载')}</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '8px' }}>
-            <a href="#" className="ai-item" style={{ textDecoration: 'none', padding: '12px' }}>
-              <span style={{ fontSize: '16px', marginBottom: '4px' }}>🪟</span>
-              <span className="ai-name">Windows</span>
-              <span className="ai-sub">.exe</span>
-            </a>
-            <a href="#" className="ai-item" style={{ textDecoration: 'none', padding: '12px' }}>
-              <span style={{ fontSize: '16px', marginBottom: '4px' }}>🍎</span>
-              <span className="ai-name">macOS</span>
-              <span className="ai-sub">Apple Silicon</span>
-            </a>
-            <a href="#" className="ai-item" style={{ textDecoration: 'none', padding: '12px' }}>
-              <span style={{ fontSize: '16px', marginBottom: '4px' }}>📱</span>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+            <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+              <span style={{ fontSize: '24px' }}>🪟</span>
+              <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600 }}>Windows</span>
+              <a 
+                href="https://download.nobluue.com/Win-Blunote.Setup.0.1.23_2.exe" 
+                className="ai-sub" 
+                style={{ 
+                  textDecoration: 'none', 
+                  padding: '6px 16px', 
+                  background: 'var(--blue-soft)', 
+                  color: 'var(--blue)', 
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: 500,
+                  transition: 'opacity 0.2s'
+                }} 
+                onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+                download
+              >
+                Download .exe
+              </a>
+            </div>
+
+            <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+              <span style={{ fontSize: '24px' }}>🍎</span>
+              <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600 }}>macOS</span>
+              <a 
+                href="https://download.nobluue.com/Blunote-0.1.23-arm64.dmg" 
+                className="ai-sub" 
+                style={{ 
+                  textDecoration: 'none', 
+                  padding: '6px 16px', 
+                  background: 'var(--blue-soft)', 
+                  color: 'var(--blue)', 
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: 500,
+                  transition: 'opacity 0.2s'
+                }} 
+                onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+                download
+              >
+                Download .dmg
+              </a>
+            </div>
+
+            <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+              <span style={{ fontSize: '24px' }}>📱</span>
               <span className="ai-name">iOS</span>
-              <span className="ai-sub">App Store</span>
-            </a>
+              <a 
+                href="https://apps.apple.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="ai-sub" 
+                style={{ 
+                  textDecoration: 'none', 
+                  padding: '6px 16px', 
+                  background: 'var(--bg2)', 
+                  color: 'var(--text3)', 
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: 500
+                }}
+              >
+                App Store
+              </a>
+            </div>
           </div>
+          <p style={{ fontSize: '11px', color: 'var(--text3)', marginTop: '16px', textAlign: 'center' }}>
+            {t('More platforms coming soon.', '更多平台即将推出。')}
+          </p>
         </div>
 
         <div className="d-card">
