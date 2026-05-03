@@ -87,21 +87,24 @@ export function Blunote() {
 
             <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
               <span style={{ fontSize: '24px' }}>📱</span>
-              <span className="ai-name">iOS</span>
+              <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600 }}>iOS</span>
               <a 
-                href="https://apps.apple.com" 
+                href="https://apps.apple.com/us/app/blunote/id6761996337" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="ai-sub" 
                 style={{ 
                   textDecoration: 'none', 
                   padding: '6px 16px', 
-                  background: 'var(--bg2)', 
-                  color: 'var(--text3)', 
+                  background: 'var(--blue-soft)', 
+                  color: 'var(--blue)', 
                   borderRadius: '6px',
                   fontSize: '11px',
-                  fontWeight: 500
-                }}
+                  fontWeight: 500,
+                  transition: 'opacity 0.2s'
+                }} 
+                onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
               >
                 App Store
               </a>

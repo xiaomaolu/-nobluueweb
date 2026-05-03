@@ -98,9 +98,8 @@ export function Home() {
                 <a className="ai-item" href="https://www.figma.com/community/plugin/1445266488816121265" target="_blank" rel="noopener noreferrer">
                   <div className="ai-icon-wrap" style={{ overflow: 'hidden' }}>
                     <img 
-                      src="https://s3-figma-plugin-images-production-sig.figma.com/plugins/carousel/img/1445266488816121265/18ae7273676b9a3ff122302b2a24f21e99847fc5?Expires=1777248000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZXViFWVnwNjXdQAY8bCSBZjOtbqdLp-jn-FnSi0tE9tN5TlE1AFTgNgjh3e6GChWBwI5Q15RQUXbTuFcaU-OxMLs3ICbQ-kulY3d1UUINNyjoLCSkdTwQ1cKFXyO6sBz6ezo1m5FKz60zk9XlbuF8rkdrB4tE~FW2U25uvm6404IygZRS5izxEcgvt-NfRhsGKLPX-8oiP7--6bubC9hZYoQ4P5-tdxNueeHlSx7MwhLMEq2AxjbHmgpJnwjxHW2WBSyTklWz0ZZEz-Resepo4utSf7eC6LO7irtcSMRPytNydMzpLjXJruGMHT85IjGv-DAXFeK9k2~oslB5stiOA__" 
+                      src="https://s3-figma-plugin-images-production-sig.figma.com/plugins/carousel/img/1445266488816121265/18ae7273676b9a3ff122302b2a24f21e99847fc5?Expires=1778457600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=r2yPmpDnT8G4hWMZftmGLI3yKkEXhW7X6Q4zpJVBqAL3TLQtXnJPXU3botj-IDo-VEOTfgprhQhq7IGDoha3QFb9Rx3HBkQcsEEXrs2j8xSsjoUy0NMUltU8Qd3gW3FZP4MJ-qmJtFOaOmuwYof0FyjBJaf7meWAemwYiRQzeFmO-ZUdN2c-mnU8vPbCjqqL-5jUs-1QpAmRxi-d-K53MrmYYESSqHTkRPjAC2YHKE~EI0JiUZZPNafImon53x27EVjdModFPOJuUE~y2uRQFb2tTeQ~34TDFVgPqxm9yahoRiEst4WuiAKBwrj~hpVvCWM1FQqzBZ1M7aTXWVnaaw__" 
                       alt="DateTime Inserter icon" 
-                      referrerPolicy="no-referrer"
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
