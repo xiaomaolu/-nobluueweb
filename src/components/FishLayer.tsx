@@ -9,7 +9,7 @@ export function FishLayer() {
   const { theme } = useAppContext();
   const layerRef = useRef<HTMLDivElement>(null);
   const fishesRef = useRef<any[]>([]);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
   const mouseRef = useRef({ x: -9999, y: -9999, px: -9999, py: -9999, vel: 0 });
   const clickRef = useRef({ x: -9999, y: -9999, power: 0 });
 

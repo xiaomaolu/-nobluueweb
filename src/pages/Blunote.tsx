@@ -37,52 +37,72 @@ export function Blunote() {
         <div className="d-card">
           <div className="label">{t('Downloads', '软件下载')}</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
-            <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
-              <span style={{ fontSize: '24px' }}>🪟</span>
-              <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600 }}>Windows</span>
-              <a 
-                href="https://download.nobluue.com/Win-Blunote.Setup.0.1.23_2.exe" 
-                className="ai-sub" 
-                style={{ 
-                  textDecoration: 'none', 
-                  padding: '6px 16px', 
-                  background: 'var(--blue-soft)', 
-                  color: 'var(--blue)', 
-                  borderRadius: '6px',
-                  fontSize: '11px',
-                  fontWeight: 500,
-                  transition: 'opacity 0.2s'
-                }} 
-                onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
-                download
-              >
-                Download .exe
-              </a>
+            <div className="ai-item" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <Link to="/blunote/windows" style={{ textDecoration: 'none', padding: '24px 20px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', width: '100%', boxSizing: 'border-box' }}>
+                <span style={{ fontSize: '32px' }}>🪟</span>
+                <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '15px' }}>Windows</span>
+              </Link>
+              <div style={{ padding: '0 20px 24px', display: 'flex', justifyContent: 'center' }}>
+                <a 
+                  href="https://download.nobluue.com/Win-Blunote.Setup.0.1.23_2.exe" 
+                  className="ai-sub" 
+                  style={{ 
+                    textDecoration: 'none', 
+                    padding: '8px 20px', 
+                    background: 'var(--blue-soft)', 
+                    color: 'var(--blue)', 
+                    borderRadius: '8px',
+                    fontSize: '12px',
+                    fontWeight: 500,
+                    transition: 'all 0.2s'
+                  }} 
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = 'var(--blue)';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = 'var(--blue-soft)';
+                    e.currentTarget.style.color = 'var(--blue)';
+                  }}
+                  download
+                >
+                  Download .exe
+                </a>
+              </div>
             </div>
 
-            <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
-              <span style={{ fontSize: '24px' }}>🍎</span>
-              <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600 }}>macOS</span>
-              <a 
-                href="https://download.nobluue.com/Blunote-0.1.23-arm64.dmg" 
-                className="ai-sub" 
-                style={{ 
-                  textDecoration: 'none', 
-                  padding: '6px 16px', 
-                  background: 'var(--blue-soft)', 
-                  color: 'var(--blue)', 
-                  borderRadius: '6px',
-                  fontSize: '11px',
-                  fontWeight: 500,
-                  transition: 'opacity 0.2s'
-                }} 
-                onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
-                download
-              >
-                Download .dmg
-              </a>
+            <div className="ai-item" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <Link to="/blunote/macos" style={{ textDecoration: 'none', padding: '24px 20px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', width: '100%', boxSizing: 'border-box' }}>
+                <span style={{ fontSize: '32px' }}>🍎</span>
+                <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '15px' }}>macOS</span>
+              </Link>
+              <div style={{ padding: '0 20px 24px', display: 'flex', justifyContent: 'center' }}>
+                <a 
+                  href="https://download.nobluue.com/Blunote-0.1.23-arm64.dmg" 
+                  className="ai-sub" 
+                  style={{ 
+                    textDecoration: 'none', 
+                    padding: '8px 20px', 
+                    background: 'var(--blue-soft)', 
+                    color: 'var(--blue)', 
+                    borderRadius: '8px',
+                    fontSize: '12px',
+                    fontWeight: 500,
+                    transition: 'all 0.2s'
+                  }} 
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = 'var(--blue)';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = 'var(--blue-soft)';
+                    e.currentTarget.style.color = 'var(--blue)';
+                  }}
+                  download
+                >
+                  Download .dmg
+                </a>
+              </div>
             </div>
 
             <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>

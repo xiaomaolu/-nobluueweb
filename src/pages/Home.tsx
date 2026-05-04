@@ -79,20 +79,21 @@ export function Home() {
               <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.10em', color: 'var(--text3)', marginBottom: '10px' }}>
                 Vibe Coding
               </div>
-              <div className="ai-grid">
+              <div className="ai-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '16px' }}>
+                <Link className="ai-item" to="/blunote" style={{ gridColumn: '1 / -1', padding: '24px', display: 'flex', alignItems: 'center', textAlign: 'left', gap: '20px' }}>
+                  <div className="ai-icon-wrap" style={{ width: '48px', height: '48px', flexShrink: 0, background: 'rgba(36,65,255,0.08)', borderColor: 'rgba(36,65,255,0.20)' }}>
+                    {ICON_BLUNOTE}
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                    <span className="ai-name" style={{ fontSize: '16px', fontWeight: 600 }}>Blunote</span>
+                    <span className="ai-sub" style={{ fontSize: '13px' }}>{t('Silent Digital Garden App', '静谧数字花园应用')}</span>
+                  </div>
+                </Link>
+
                 <Link className="ai-item" to="/ai-life/vibe-coding">
                   <div className="ai-icon-wrap">{ICON_NOTION}</div>
                   <span className="ai-name">Notion Website Clipper</span>
                   <span className="ai-sub">Chrome extension</span>
-                </Link>
-
-                <Link className="ai-item" to="/blunote">
-                  <div className="ai-icon-wrap" style={{ background: 'rgba(36,65,255,0.08)', borderColor: 'rgba(36,65,255,0.20)' }}>
-                    {ICON_BLUNOTE}
-                  </div>
-                  <span className="ai-name">Blunote</span>
-                  <span className="ai-sub">{t('Silent Digital Garden App', '静谧数字花园应用')}</span>
-                  <span className="ai-platform" style={{ fontSize: '9px', color: 'var(--text3)', letterSpacing: '0.04em', fontFamily: "'JetBrains Mono',monospace", marginTop: '-4px' }}>macOS / Windows</span>
                 </Link>
 
                 <a className="ai-item" href="https://www.figma.com/community/plugin/1445266488816121265" target="_blank" rel="noopener noreferrer">
