@@ -475,8 +475,13 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
 
 .coin-heatmap-symbol {
   display:flex; align-items:center; justify-content:center; gap:5px;
-  max-width:100%; font-size:clamp(9px, 1.8vw, 14px);
+  width:100%; max-width:100%; font-size:clamp(9px, 1.8vw, 14px);
   font-weight:600; line-height:1.1; white-space:nowrap;
+}
+
+.coin-heatmap-symbol span {
+  min-width:0; max-width:100%; overflow:hidden;
+  text-overflow:ellipsis; white-space:nowrap;
 }
 
 .coin-heatmap-symbol img {

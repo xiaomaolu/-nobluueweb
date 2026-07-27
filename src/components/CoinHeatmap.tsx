@@ -275,7 +275,7 @@ export function CoinHeatmap() {
               {showSymbol && (
                 <span className="coin-heatmap-symbol">
                   {showLogo && <img src={tile.image} alt="" loading="lazy" />}
-                  {tile.symbol.toUpperCase()}
+                  <span>{tile.symbol.toUpperCase()}</span>
                 </span>
               )}
               {showChange && <strong>{formatChange(change)}</strong>}
