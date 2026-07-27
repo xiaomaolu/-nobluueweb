@@ -3,7 +3,7 @@ import { useAppContext } from '../AppContext';
 
 const FISH_R = ['><(((º>', '><((º>·', '><(º>··'];
 const FISH_L = ['<º)))><', '·<º))><', '··<º)><'];
-const N = 6;
+const FISH_COUNT = 1;
 
 export function FishLayer() {
   const { theme } = useAppContext();
@@ -23,6 +23,7 @@ export function FishLayer() {
 
     const makeFish = (scatter: boolean) => {
       const el = document.createElement('span');
+      el.dataset.fish = '';
       el.style.cssText = [
         'position:absolute', 'top:0', 'left:0',
         'font-family:"JetBrains Mono",monospace',
@@ -45,7 +46,7 @@ export function FishLayer() {
       };
     };
 
-    for (let i = 0; i < N; i++) {
+    for (let i = 0; i < FISH_COUNT; i++) {
       fishesRef.current.push(makeFish(true));
     }
 
@@ -154,6 +155,8 @@ export function FishLayer() {
   return (
     <div
       ref={layerRef}
+      data-fish-layer
+      aria-hidden="true"
       style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 1, overflow: 'hidden' }}
     />
   );
