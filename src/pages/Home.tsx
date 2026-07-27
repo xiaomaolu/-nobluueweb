@@ -101,10 +101,12 @@ export function Home() {
 
                 <a className="ai-item" href="https://www.figma.com/community/plugin/1445266488816121265" target="_blank" rel="noopener noreferrer">
                   <div className="ai-icon-wrap" style={{ overflow: 'hidden' }}>
-                    <img 
-                      src="https://s3-figma-plugin-images-production-sig.figma.com/plugins/carousel/img/1445266488816121265/18ae7273676b9a3ff122302b2a24f21e99847fc5?Expires=1778457600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=r2yPmpDnT8G4hWMZftmGLI3yKkEXhW7X6Q4zpJVBqAL3TLQtXnJPXU3botj-IDo-VEOTfgprhQhq7IGDoha3QFb9Rx3HBkQcsEEXrs2j8xSsjoUy0NMUltU8Qd3gW3FZP4MJ-qmJtFOaOmuwYof0FyjBJaf7meWAemwYiRQzeFmO-ZUdN2c-mnU8vPbCjqqL-5jUs-1QpAmRxi-d-K53MrmYYESSqHTkRPjAC2YHKE~EI0JiUZZPNafImon53x27EVjdModFPOJuUE~y2uRQFb2tTeQ~34TDFVgPqxm9yahoRiEst4WuiAKBwrj~hpVvCWM1FQqzBZ1M7aTXWVnaaw__" 
-                      alt="DateTime Inserter icon" 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    <img
+                      src="/bluue-date-logo.png"
+                      alt="Bluue Date logo"
+                      width="40"
+                      height="40"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     />
                   </div>
                   <span className="ai-name">DateTime Inserter</span>

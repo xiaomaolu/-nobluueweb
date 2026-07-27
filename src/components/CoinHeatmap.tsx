@@ -25,7 +25,8 @@ interface CacheEntry {
   coins: MarketCoin[];
 }
 
-const CACHE_KEY = 'nobluue:coin-heatmap:v1';
+const TOP_COINS = 10;
+const CACHE_KEY = 'nobluue:coin-heatmap:v2';
 const CACHE_FRESH_MS = 2 * 60 * 1000;
 const REFRESH_MS = 5 * 60 * 1000;
 const TILE_GAP = 2;
@@ -152,7 +153,7 @@ export function CoinHeatmap() {
       const response = await fetch(coinGeckoUrl('coins/markets', {
         vs_currency: 'usd',
         order: 'market_cap_desc',
-        per_page: '50',
+        per_page: String(TOP_COINS),
         page: '1',
         sparkline: 'false',
         price_change_percentage: '24h',
@@ -214,7 +215,7 @@ export function CoinHeatmap() {
       <div className="coin-heatmap-meta">
         <span>
           {status === 'loading' && t('Loading live market data…', '正在加载实时市场数据…')}
-          {status === 'ready' && t(`Top 50 · Updated ${updatedLabel}`, `市值前 50 · 更新于 ${updatedLabel}`)}
+          {status === 'ready' && t(`Top ${TOP_COINS} · Updated ${updatedLabel}`, `市值前 ${TOP_COINS} · 更新于 ${updatedLabel}`)}
           {status === 'stale' && t(`Cached data · ${updatedLabel}`, `缓存数据 · ${updatedLabel}`)}
           {status === 'error' && t('Market data is temporarily unavailable', '市场数据暂时不可用')}
         </span>
@@ -227,7 +228,7 @@ export function CoinHeatmap() {
         ref={containerRef}
         className="coin-heatmap-canvas"
         role="list"
-        aria-label={t('Top cryptocurrencies by market capitalization', '按市值排列的主流加密货币')}
+        aria-label={t(`Top ${TOP_COINS} cryptocurrencies by market capitalization`, `按市值排列的前 ${TOP_COINS} 种加密货币`)}
       >
         {status === 'loading' && (
           <div className="coin-heatmap-loading" aria-hidden="true">
@@ -250,8 +251,8 @@ export function CoinHeatmap() {
           const showName = innerWidth > 120 && innerHeight > 62;
           const showPrice = innerWidth > 92 && innerHeight > 78;
           const showLogo = innerWidth > 72 && innerHeight > 58;
-          const showSymbol = innerWidth >= 58 && innerHeight >= 26;
-          const showChange = showSymbol && innerHeight >= 38;
+          const showSymbol = innerWidth >= 28 && innerHeight >= 22;
+          const showChange = showSymbol && innerWidth >= 48 && innerHeight >= 38;
           const change = tile.price_change_percentage_24h;
 
           return (
