@@ -79,18 +79,19 @@ export function Home() {
                 AI Life
               </div>
 
-              <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.10em', color: 'var(--text3)', marginBottom: '10px' }}>
+              <div className="ai-section-title">
                 Vibe Coding
               </div>
-              <div className="ai-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '16px' }}>
-                <Link className="ai-item" to="/blunote" style={{ gridColumn: '1 / -1', padding: '24px', display: 'flex', alignItems: 'center', textAlign: 'left', gap: '20px' }}>
-                  <div className="ai-icon-wrap" style={{ width: '48px', height: '48px', flexShrink: 0, background: 'rgba(36,65,255,0.08)', borderColor: 'rgba(36,65,255,0.20)' }}>
+              <div className="ai-grid">
+                <Link className="ai-item ai-item--featured" to="/blunote">
+                  <div className="ai-icon-wrap ai-icon-wrap--featured">
                     {ICON_BLUNOTE}
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                    <span className="ai-name" style={{ fontSize: '16px', fontWeight: 600 }}>Blunote</span>
-                    <span className="ai-sub" style={{ fontSize: '13px' }}>{t('Silent Digital Garden App', '静谧数字花园应用')}</span>
+                  <div className="ai-featured-copy">
+                    <span className="ai-name">Blunote</span>
+                    <span className="ai-sub">{t('Silent Digital Garden App', '静谧数字花园应用')}</span>
                   </div>
+                  <span className="ai-featured-arrow" aria-hidden="true">›</span>
                 </Link>
 
                 <Link className="ai-item" to="/ai-life/vibe-coding">
@@ -100,13 +101,12 @@ export function Home() {
                 </Link>
 
                 <a className="ai-item" href="https://www.figma.com/community/plugin/1445266488816121265" target="_blank" rel="noopener noreferrer">
-                  <div className="ai-icon-wrap" style={{ overflow: 'hidden' }}>
+                  <div className="ai-icon-wrap ai-icon-wrap--image">
                     <img
                       src="/bluue-date-logo.png"
                       alt="Bluue Date logo"
                       width="40"
                       height="40"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     />
                   </div>
                   <span className="ai-name">DateTime Inserter</span>
