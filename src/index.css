@@ -728,7 +728,7 @@ html.dark .stock-logo-wrap svg [fill="#1d1d1f"] { fill:#e0e0e0; }
 }
 
 @media(max-width:640px){
-  .layout{grid-template-columns:1fr;padding:24px 16px 60px;}
+  .layout{grid-template-columns:1fr;padding:64px 16px 60px;}
   .side-col{position:static;}
   .price-panel{flex-direction:row;flex-wrap:wrap;gap:8px;}
   .price-row{flex:1;min-width:140px;grid-template-columns:28px 1fr;}

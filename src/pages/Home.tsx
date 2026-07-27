@@ -23,8 +23,10 @@ export function Home() {
               <div className="avatar-wrap">
                 <img
                   className="avatar"
-                  src="https://pbs.twimg.com/profile_images/2021502946949857282/M8xKPJUU_400x400.jpg"
-                  alt="avatar"
+                  src="/avatar-cat.png"
+                  alt="no bluue black cat avatar"
+                  width="72"
+                  height="72"
                   onError={(e) => { (e.target as HTMLImageElement).style.background = '#e8e5f0'; }}
                 />
                 <span className="online-dot"></span>
