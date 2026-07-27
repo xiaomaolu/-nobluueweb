@@ -430,6 +430,102 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
   padding:20px; backdrop-filter:blur(20px); overflow:hidden; transition:background 0.35s;
 }
 
+.coin-heatmap {
+  display:flex; flex-direction:column; gap:8px;
+}
+
+.coin-heatmap-meta {
+  min-height:18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  color:var(--text3); font-size:9px; letter-spacing:0.04em;
+  font-family:'JetBrains Mono',monospace;
+}
+
+.coin-heatmap-meta a {
+  color:var(--text3); text-decoration:none; white-space:nowrap;
+  transition:color 0.2s;
+}
+
+.coin-heatmap-meta a:hover { color:var(--blue); }
+
+.coin-heatmap-canvas {
+  position:relative; width:100%; height:380px;
+  overflow:hidden; border-radius:var(--r-lg);
+  background:color-mix(in srgb, var(--bg2) 65%, transparent);
+}
+
+.coin-heatmap-tile {
+  position:absolute; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:2px;
+  overflow:hidden; border-radius:7px; color:#fff; text-decoration:none;
+  text-align:center; padding:4px; box-sizing:border-box;
+  font-family:'JetBrains Mono',monospace;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);
+  transition:filter 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.coin-heatmap-tile:hover {
+  filter:brightness(1.16); transform:scale(0.985); z-index:2;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.22);
+}
+
+.coin-heatmap-tile:focus-visible {
+  outline:2px solid #fff; outline-offset:-4px; z-index:3;
+}
+
+.coin-heatmap-symbol {
+  display:flex; align-items:center; justify-content:center; gap:5px;
+  max-width:100%; font-size:clamp(9px, 1.8vw, 14px);
+  font-weight:600; line-height:1.1; white-space:nowrap;
+}
+
+.coin-heatmap-symbol img {
+  width:18px; height:18px; border-radius:50%; object-fit:cover; flex-shrink:0;
+}
+
+.coin-heatmap-tile strong {
+  font-size:clamp(8px, 1.45vw, 12px); font-weight:500; line-height:1.2;
+  font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+
+.coin-heatmap-name,
+.coin-heatmap-price {
+  max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+
+.coin-heatmap-name { font-size:10px; opacity:0.78; }
+.coin-heatmap-price { font-size:9px; opacity:0.72; font-variant-numeric:tabular-nums; }
+
+.coin-heatmap-loading {
+  position:absolute; inset:0; display:grid;
+  grid-template-columns:repeat(6, 1fr); grid-template-rows:repeat(3, 1fr);
+  gap:2px; padding:2px;
+}
+
+.coin-heatmap-loading span {
+  border-radius:7px;
+  background:linear-gradient(105deg, var(--bg2) 35%, var(--bg3) 50%, var(--bg2) 65%);
+  background-size:200% 100%;
+  animation:heatmap-shimmer 1.4s linear infinite;
+}
+
+.coin-heatmap-empty {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:12px;
+  color:var(--text2); font-size:12px; text-align:center;
+}
+
+.coin-heatmap-empty button {
+  border:1px solid var(--blue-border); border-radius:999px;
+  background:var(--blue-soft); color:var(--blue); padding:6px 12px;
+  font:500 11px 'DM Sans',sans-serif; cursor:pointer;
+}
+
+@keyframes heatmap-shimmer {
+  from { background-position:100% 0; }
+  to { background-position:-100% 0; }
+}
+
 .top-controls-left {
   position: fixed; top: 16px; left: 20px; z-index: 200;
   display: flex; align-items: center; gap: 6px;
@@ -739,6 +835,9 @@ html.dark .stock-logo-wrap svg [fill="#1d1d1f"] { fill:#e0e0e0; }
   .top-controls-left{top:12px;left:14px;}
   .top-controls-right{top:12px;right:14px;}
   .top-nav{padding:54px 16px 10px;}
+  .heatmap-card{padding:16px;}
+  .coin-heatmap-canvas{height:340px;}
+  .coin-heatmap-meta{align-items:flex-start;}
 }
 
 /* ── Sunlit Layer Styles ── */

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppContext } from '../AppContext';
+import { coinGeckoUrl } from '../lib/coingecko';
 
-const CG_API_KEY = 'CG-fkqvNYJ8ktoVyG7XXUsfRRTP';
 const FINNHUB_KEY = 'd6igj7pr01qm7dc7ee30d6igj7pr01qm7dc7ee3g';
 
 const STOCKS = [
@@ -36,7 +36,11 @@ export function PricePanel() {
     const fetchPrices = async () => {
       try {
         const res = await fetch(
-          `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true&x_cg_demo_api_key=${CG_API_KEY}`
+          coinGeckoUrl('simple/price', {
+            ids: 'bitcoin,ethereum,solana',
+            vs_currencies: 'usd',
+            include_24hr_change: 'true',
+          })
         );
         if (res.ok) {
           setPrices(await res.json());
