@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../AppContext';
 
@@ -6,6 +7,46 @@ const ICON_BLUNOTE = <svg width="32" height="31" viewBox="0 0 106 101" fill="non
 
 export function Blunote() {
   const { t, language } = useAppContext();
+
+  useEffect(() => {
+    const title = 'Blunote — Local-first Notes & Knowledge Management';
+    const description = 'Blunote is a local-first note-taking and knowledge management app with optional Google Drive backup, restore, and sync.';
+    const previousTitle = document.title;
+    const descriptionMeta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const applicationNameMeta = document.querySelector<HTMLMetaElement>('meta[name="application-name"]');
+    const previousDescription = descriptionMeta?.content;
+    const previousApplicationName = applicationNameMeta?.content;
+
+    document.title = title;
+
+    const descriptionElement = descriptionMeta ?? document.createElement('meta');
+    descriptionElement.name = 'description';
+    descriptionElement.content = description;
+    if (!descriptionMeta) {
+      document.head.appendChild(descriptionElement);
+    }
+
+    const applicationNameElement = applicationNameMeta ?? document.createElement('meta');
+    applicationNameElement.name = 'application-name';
+    applicationNameElement.content = 'Blunote';
+    if (!applicationNameMeta) {
+      document.head.appendChild(applicationNameElement);
+    }
+
+    return () => {
+      document.title = previousTitle;
+      if (descriptionMeta && previousDescription !== undefined) {
+        descriptionMeta.content = previousDescription;
+      } else {
+        descriptionElement.remove();
+      }
+      if (applicationNameMeta && previousApplicationName !== undefined) {
+        applicationNameMeta.content = previousApplicationName;
+      } else {
+        applicationNameElement.remove();
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -26,13 +67,40 @@ export function Blunote() {
           <div className="d-hero-icon" style={{ background: 'rgba(36,65,255,0.08)', padding: '12px', borderRadius: '16px' }}>{ICON_BLUNOTE}</div>
           <div>
             <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: '4px' }}>Silent Digital Garden</div>
-            <div className="d-hero-title" style={{ fontFamily: "'Lora', serif", fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', marginBottom: '6px' }}>Blunote</div>
+            <h1 className="d-hero-title" style={{ fontFamily: "'Lora', serif", fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, lineHeight: 1.2, color: 'var(--text)', letterSpacing: '-0.01em', margin: '0 0 6px' }}>Blunote</h1>
             <div className="d-hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--blue)', background: 'var(--blue-soft)', borderRadius: '20px', padding: '2px 9px' }}>
               <span className="d-live-dot" style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--green)' }}></span>
               Local-first · Privacy Focused · Multi-platform
             </div>
           </div>
         </div>
+
+        <section className="d-card blunote-purpose" aria-labelledby="blunote-purpose-title">
+          <div className="label">{t('About Blunote', '关于 Blunote')}</div>
+          <h2 id="blunote-purpose-title">
+            {t('What Blunote does', 'Blunote 的用途')}
+          </h2>
+          <p>
+            {t(
+              'Blunote is a local-first note-taking and knowledge management app. It helps you capture ideas, organize notes with folders and tags, manage attachments, and maintain a personal knowledge base across supported devices.',
+              'Blunote 是一款本地优先的笔记与知识管理应用，帮助你记录想法、使用文件夹和标签整理笔记、管理附件，并在支持的设备上维护个人知识库。'
+            )}
+          </p>
+
+          <div className="blunote-drive-purpose">
+            <h3>{t('Optional Google Drive backup and sync', '可选的 Google Drive 备份与同步')}</h3>
+            <p>
+              {t(
+                'When you choose to connect Google Drive, Blunote creates and manages a visible “Drive-Blunote” folder. Using the limited drive.file permission, Blunote accesses only files and folders it creates or that you open with the app. This access is used solely to back up, restore, and sync your Blunote data. Blunote does not request access to the rest of your Google Drive.',
+                '当你主动连接 Google Drive 时，Blunote 会创建并管理一个清晰可见的“Drive-Blunote”文件夹。通过受限的 drive.file 权限，Blunote 仅访问由本应用创建或由你使用本应用打开的文件与文件夹；这些权限只用于备份、恢复和同步你的 Blunote 数据，不会请求访问 Google Drive 中的其他内容。'
+              )}
+            </p>
+          </div>
+          <div className="blunote-home-links" aria-label={t('Blunote information', 'Blunote 相关信息')}>
+            <a href="#privacy-policy">{t('Read the Privacy Policy', '查看隐私政策')}</a>
+            <Link to="/blunote/support">{t('Contact Blunote Support', '联系 Blunote 技术支持')}</Link>
+          </div>
+        </section>
 
         <div className="d-card">
           <div className="label">{t('Downloads', '软件下载')}</div>
@@ -147,7 +215,7 @@ export function Blunote() {
           </Link>
         </div>
 
-        <div className="d-card">
+        <div className="d-card" id="privacy-policy">
           <div className="label">{t('Privacy Policy', '隐私政策')}</div>
           <div className="privacy" style={{ fontSize: '12px', color: 'var(--text2)', lineHeight: 1.7 }}>
             {language === 'en' ? (
@@ -209,7 +277,7 @@ export function Blunote() {
         </div>
 
         <footer className="footer" style={{ marginTop: '28px', textAlign: 'center', fontSize: '11px', color: 'var(--text3)' }}>
-          <p>no bluue &nbsp;·&nbsp; Powered by <a href="https://workers.cloudflare.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue)', textDecoration: 'none' }}>Cloudflare Workers</a></p>
+          <p>Blunote by no bluue &nbsp;·&nbsp; Powered by <a href="https://workers.cloudflare.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue)', textDecoration: 'none' }}>Cloudflare Workers</a></p>
         </footer>
       </div>
     </>

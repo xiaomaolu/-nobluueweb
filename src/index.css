@@ -518,6 +518,70 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
 .d-card:nth-child(3){animation:rise 0.6s 0.14s cubic-bezier(.22,1,.36,1) both;}
 .d-card:nth-child(4){animation:rise 0.6s 0.20s cubic-bezier(.22,1,.36,1) both;}
 
+.blunote-purpose h2 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-family: 'Lora', serif;
+  font-size: clamp(19px, 3vw, 23px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.blunote-purpose > p {
+  margin: 0;
+  color: var(--text2);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.blunote-drive-purpose {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(36, 65, 255, 0.12);
+  border-radius: var(--r-lg);
+  background: rgba(36, 65, 255, 0.055);
+}
+
+.blunote-drive-purpose h3 {
+  margin: 0 0 6px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.blunote-drive-purpose p {
+  margin: 0;
+  color: var(--text2);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.blunote-home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 16px;
+}
+
+.blunote-home-links a {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.blunote-home-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html.dark .blunote-drive-purpose {
+  border-color: rgba(94, 117, 255, 0.22);
+  background: rgba(36, 65, 255, 0.11);
+}
+
 .feat-item{
   display:flex;align-items:flex-start;gap:12px;
   padding:12px 14px;background:var(--bg3);
@@ -674,6 +738,7 @@ html.dark .stock-logo-wrap svg [fill="#1d1d1f"] { fill:#e0e0e0; }
   .m-l{text-align:left;}.m-s{display:none;}
   .top-controls-left{top:12px;left:14px;}
   .top-controls-right{top:12px;right:14px;}
+  .top-nav{padding:54px 16px 10px;}
 }
 
 /* ── Sunlit Layer Styles ── */
