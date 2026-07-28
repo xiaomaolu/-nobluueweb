@@ -432,6 +432,189 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
   fill:var(--blue);
 }
 
+.catmark-nav-inner {
+  max-width:680px; margin:0 auto;
+  display:flex; align-items:center; gap:8px;
+}
+
+.catmark-back {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 8px; border-radius:var(--r-sm);
+  color:var(--text3); font-size:12px; text-decoration:none;
+  transition:background 0.2s,color 0.2s;
+}
+
+.catmark-back:hover {
+  background:var(--blue-soft); color:var(--blue);
+}
+
+.catmark-back svg {
+  width:14px; height:14px; flex-shrink:0; fill:currentColor;
+}
+
+.catmark-breadcrumb {
+  display:flex; align-items:center; gap:6px;
+  color:var(--text3); font-size:12px;
+}
+
+.catmark-breadcrumb strong {
+  color:var(--text); font-weight:500;
+}
+
+.catmark-page {
+  position:relative; z-index:1;
+  width:min(680px,calc(100% - 40px));
+  margin:0 auto; padding:36px 0 80px;
+  display:flex; flex-direction:column; gap:12px;
+}
+
+.catmark-hero-icon {
+  background:var(--blue-soft);
+}
+
+.catmark-hero-mark {
+  width:44px; height:44px; color:var(--text2);
+}
+
+.catmark-hero-mark path {
+  stroke:currentColor; stroke-width:4.6; stroke-linejoin:round;
+}
+
+.catmark-hero-mark circle {
+  fill:var(--blue);
+}
+
+.catmark-hero-copy {
+  min-width:0;
+}
+
+.catmark-kicker {
+  margin-bottom:4px;
+  color:var(--text3); font-size:10px; font-weight:600;
+  letter-spacing:0.12em; text-transform:uppercase;
+}
+
+.catmark-hero h1,
+.catmark-about h2 {
+  font-family:'Lora','Noto Serif SC',serif;
+  color:var(--text); font-weight:600;
+  letter-spacing:-0.015em;
+}
+
+.catmark-hero h1 {
+  margin:0 0 4px;
+  font-size:clamp(22px,4vw,28px); line-height:1.2;
+}
+
+.catmark-hero p {
+  margin:0;
+  color:var(--text2); font-size:12px; line-height:1.65;
+}
+
+.catmark-about h2 {
+  margin:0 0 10px;
+  font-size:clamp(19px,3vw,23px); line-height:1.35;
+}
+
+.catmark-about > p {
+  margin:0;
+  color:var(--text2); font-size:13px; line-height:1.8;
+}
+
+.catmark-actions {
+  display:flex; align-items:center; flex-wrap:wrap;
+  gap:10px; margin-top:20px;
+}
+
+.catmark-primary-action,
+.catmark-secondary-action {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:38px; padding:0 15px;
+  border-radius:10px;
+  font-size:12px; font-weight:500; text-decoration:none;
+  transition:transform 0.2s,background 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.catmark-primary-action {
+  gap:7px;
+  background:var(--blue); color:white;
+}
+
+.catmark-primary-action:hover {
+  transform:translateY(-1px);
+}
+
+.catmark-primary-action svg {
+  width:13px; height:13px;
+  fill:none; stroke:currentColor; stroke-width:1.5;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+
+.catmark-secondary-action {
+  border:1px solid var(--border-h);
+  color:var(--text2);
+}
+
+.catmark-secondary-action:hover {
+  border-color:var(--blue-border); color:var(--blue);
+  background:var(--blue-soft);
+}
+
+.catmark-feature-list {
+  display:grid; grid-template-columns:1fr 1fr; gap:8px;
+}
+
+.catmark-feature {
+  min-height:92px;
+}
+
+.catmark-feature-number {
+  width:24px; height:24px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  margin-top:1px; border-radius:7px;
+  background:var(--blue-soft); color:var(--blue);
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; font-weight:500;
+}
+
+.catmark-feature h3,
+.catmark-steps h3 {
+  margin:0 0 3px;
+  color:var(--text); font-size:12px; font-weight:500;
+}
+
+.catmark-feature p,
+.catmark-steps p {
+  margin:0;
+  color:var(--text3); font-size:11.5px; line-height:1.6;
+}
+
+.catmark-steps {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+  margin:0; padding:0; list-style:none;
+}
+
+.catmark-steps li {
+  display:flex; gap:10px;
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  background:var(--bg3);
+}
+
+.catmark-steps li > span {
+  width:22px; height:22px; flex:0 0 auto;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%;
+  background:var(--blue-soft); color:var(--blue);
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+}
+
+.catmark-footer {
+  margin-top:28px;
+}
+
 .ai-item:not(.ai-item--featured) .ai-name {
   min-height:32px; margin-top:11px;
   display:flex; align-items:center; justify-content:center;
@@ -941,6 +1124,12 @@ html.dark .stock-logo-wrap svg [fill="#1d1d1f"] { fill:#e0e0e0; }
   .heatmap-card{padding:16px;}
   .coin-heatmap-canvas{height:340px;}
   .coin-heatmap-meta{align-items:flex-start;}
+  .catmark-breadcrumb span:nth-child(2){display:none;}
+  .catmark-page{width:calc(100% - 32px);padding-top:22px;}
+  .catmark-hero{align-items:flex-start;padding:26px 22px;}
+  .catmark-feature-list{grid-template-columns:1fr;}
+  .catmark-feature{min-height:0;}
+  .catmark-steps{grid-template-columns:1fr;}
 }
 
 /* ── Sunlit Layer Styles ── */

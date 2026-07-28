@@ -3,6 +3,7 @@ import { useAppContext } from '../AppContext';
 import { PricePanel } from '../components/PricePanel';
 import { FishLayer } from '../components/FishLayer';
 import { CoinHeatmap } from '../components/CoinHeatmap';
+import { CatmarkMark } from '../components/CatmarkMark';
 
 const ICON_X = <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: '15px', height: '15px', fill: 'currentColor', display: 'block', flexShrink: 0 }}><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" /></svg>;
 const ICON_TG = <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style={{ width: '15px', height: '15px', fill: 'currentColor', display: 'block', flexShrink: 0 }}><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" /></svg>;
@@ -17,13 +18,6 @@ const ICON_DOODLE = (
     <path d="M20.2 29C22.8 30.1 25.3 30.2 28.2 29.1" />
     <path d="M31.5 34.2L39.3 26.3M35.3 35.6L40.7 30.1" />
     <circle cx="14.2" cy="14.2" r="2.4" className="doodle-icon-dot" />
-  </svg>
-);
-const ICON_CATMARK = (
-  <svg className="catmark-icon" viewBox="0 0 135 135" fill="none" aria-hidden="true">
-    <path d="M93.6585 111V53.5785L57.1415 47.7569L56.0831 25L47.6154 46.1692L49.2031 25L41 46.1692V100.945L93.6585 111Z" />
-    <circle cx="55.8184" cy="69.72" r="6.61538" />
-    <circle cx="75.9292" cy="71.8369" r="6.61538" />
   </svg>
 );
 
@@ -143,19 +137,17 @@ export function Home() {
                   <span className="ai-name">Bluue Minimal Doodle</span>
                   <span className="ai-sub">{t('Open-source AI Skill', '开源 AI Skill')}</span>
                 </a>
-                <a
+                <Link
                   className="ai-item"
-                  href="https://bookmark.nobluue.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t('Open Catmark bookmark canvas', '打开 Catmark 书签画布')}
+                  to="/ai-life/catmark"
+                  aria-label={t('Learn about Catmark bookmark canvas', '了解 Catmark 书签画布')}
                 >
                   <div className="ai-icon-wrap ai-icon-wrap--catmark">
-                    {ICON_CATMARK}
+                    <CatmarkMark className="catmark-icon" />
                   </div>
                   <span className="ai-name">Catmark</span>
                   <span className="ai-sub">{t('Bookmark Canvas', '书签画布')}</span>
-                </a>
+                </Link>
               </div>
             </div>
 
