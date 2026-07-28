@@ -19,6 +19,13 @@ const ICON_DOODLE = (
     <circle cx="14.2" cy="14.2" r="2.4" className="doodle-icon-dot" />
   </svg>
 );
+const ICON_CATMARK = (
+  <svg className="catmark-icon" viewBox="0 0 135 135" fill="none" aria-hidden="true">
+    <path d="M93.6585 111V53.5785L57.1415 47.7569L56.0831 25L47.6154 46.1692L49.2031 25L41 46.1692V100.945L93.6585 111Z" />
+    <circle cx="55.8184" cy="69.72" r="6.61538" />
+    <circle cx="75.9292" cy="71.8369" r="6.61538" />
+  </svg>
+);
 
 export function Home() {
   const { t } = useAppContext();
@@ -136,17 +143,19 @@ export function Home() {
                   <span className="ai-name">Bluue Minimal Doodle</span>
                   <span className="ai-sub">{t('Open-source AI Skill', '开源 AI Skill')}</span>
                 </a>
-                <div className="ai-item empty">
-                  <div className="ai-icon-wrap">
-                    <svg viewBox="0 0 24 24" style={{ width: '18px', height: '18px', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5 }}>
-                      <circle cx="12" cy="12" r="9" />
-                      <line x1="12" y1="8" x2="12" y2="16" />
-                      <line x1="8" y1="12" x2="16" y2="12" />
-                    </svg>
+                <a
+                  className="ai-item"
+                  href="https://bookmark.nobluue.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t('Open Catmark bookmark canvas', '打开 Catmark 书签画布')}
+                >
+                  <div className="ai-icon-wrap ai-icon-wrap--catmark">
+                    {ICON_CATMARK}
                   </div>
-                  <span className="ai-name">Coming</span>
-                  <span className="ai-sub">Soon</span>
-                </div>
+                  <span className="ai-name">Catmark</span>
+                  <span className="ai-sub">{t('Bookmark Canvas', '书签画布')}</span>
+                </a>
               </div>
             </div>
 

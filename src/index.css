@@ -415,6 +415,23 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
   fill:var(--blue); stroke:none;
 }
 
+.ai-icon-wrap--catmark {
+  color:var(--text2);
+}
+
+.catmark-icon {
+  width:34px; height:34px; display:block;
+}
+
+.catmark-icon path {
+  stroke:currentColor; stroke-width:4.6;
+  stroke-linejoin:round;
+}
+
+.catmark-icon circle {
+  fill:var(--blue);
+}
+
 .ai-item:not(.ai-item--featured) .ai-name {
   min-height:32px; margin-top:11px;
   display:flex; align-items:center; justify-content:center;
