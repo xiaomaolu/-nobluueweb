@@ -401,6 +401,20 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
   width:36px; height:36px; border-radius:9px; object-fit:contain;
 }
 
+.ai-icon-wrap--doodle {
+  color:var(--text2);
+}
+
+.doodle-icon {
+  width:34px; height:34px; display:block;
+  stroke:currentColor; stroke-width:2.1;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+
+.doodle-icon-dot {
+  fill:var(--blue); stroke:none;
+}
+
 .ai-item:not(.ai-item--featured) .ai-name {
   min-height:32px; margin-top:11px;
   display:flex; align-items:center; justify-content:center;

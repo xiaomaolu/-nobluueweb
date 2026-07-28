@@ -9,6 +9,16 @@ const ICON_TG = <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" styl
 const ICON_DC = <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style={{ width: '15px', height: '15px', fill: 'currentColor', display: 'block', flexShrink: 0 }}><path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" /></svg>;
 const ICON_NOTION = <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: '24px', height: '24px', fill: 'currentColor', display: 'block' }}><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" /></svg>;
 const ICON_BLUNOTE = <svg width="32" height="31" viewBox="0 0 106 101" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block' }}><path d="M36 65C36 46.2223 51.2223 31 70 31H104V65C104 83.7777 88.7777 99 70 99H36V65Z" fill="#2441FF" /><path d="M0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="#2441FF" /><path d="M36 5C36 2.23858 38.2386 0 41 0H101C103.761 0 106 2.23858 106 5V19C106 21.7614 103.761 24 101 24H41C38.2386 24 36 21.7614 36 19V5Z" fill="#2441FF" /><path d="M12 31C18.6274 31 24 36.3726 24 43V89C24 95.6274 18.6274 101 12 101C5.37258 101 0 95.6274 0 89V43C0 36.3726 5.37258 31 12 31Z" fill="#2441FF" /></svg>;
+const ICON_DOODLE = (
+  <svg className="doodle-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M10.5 9.5C17.8 8.8 30.4 9.2 37.5 10.2C38.2 17.1 37.8 29.9 36.5 37C29.1 37.8 17 37.4 10.3 36.4C9.5 29.4 9.6 16.8 10.5 9.5Z" />
+    <path d="M17.2 20.2C18.6 17.4 21.1 16 24.4 16.1C28 16.2 30.7 18.2 31.4 21.4" />
+    <path d="M19 23.7L19.2 23.7M28.8 23.8L29 23.8" />
+    <path d="M20.2 29C22.8 30.1 25.3 30.2 28.2 29.1" />
+    <path d="M31.5 34.2L39.3 26.3M35.3 35.6L40.7 30.1" />
+    <circle cx="14.2" cy="14.2" r="2.4" className="doodle-icon-dot" />
+  </svg>
+);
 
 export function Home() {
   const { t } = useAppContext();
@@ -113,17 +123,19 @@ export function Home() {
                   <span className="ai-sub" title="A simple personal use plugin for inserting date and time. It helps determine the creation time of each component on the Page.">Figma Plugin</span>
                 </a>
 
-                <div className="ai-item empty">
-                  <div className="ai-icon-wrap">
-                    <svg viewBox="0 0 24 24" style={{ width: '18px', height: '18px', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5 }}>
-                      <circle cx="12" cy="12" r="9" />
-                      <line x1="12" y1="8" x2="12" y2="16" />
-                      <line x1="8" y1="12" x2="16" y2="12" />
-                    </svg>
+                <a
+                  className="ai-item"
+                  href="https://github.com/xiaomaolu/bluue-ai-skills/tree/main/bluue-minimal-doodle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t('Open Bluue Minimal Doodle on GitHub', '在 GitHub 查看 Bluue Minimal Doodle')}
+                >
+                  <div className="ai-icon-wrap ai-icon-wrap--doodle">
+                    {ICON_DOODLE}
                   </div>
-                  <span className="ai-name">Coming</span>
-                  <span className="ai-sub">Soon</span>
-                </div>
+                  <span className="ai-name">Bluue Minimal Doodle</span>
+                  <span className="ai-sub">{t('Open-source AI Skill', '开源 AI Skill')}</span>
+                </a>
                 <div className="ai-item empty">
                   <div className="ai-icon-wrap">
                     <svg viewBox="0 0 24 24" style={{ width: '18px', height: '18px', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5 }}>
