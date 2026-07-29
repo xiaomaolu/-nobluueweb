@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../AppContext';
+import { BLUNOTE_DOWNLOADS } from '../constants/blunoteDownloads';
 
 const ICON_BACK = <svg viewBox="0 0 16 16" style={{ width: '14px', height: '14px', fill: 'currentColor', flexShrink: 0 }}><path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" /></svg>;
 const ICON_BLUNOTE = <svg width="32" height="31" viewBox="0 0 106 101" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block' }}><path d="M36 65C36 46.2223 51.2223 31 70 31H104V65C104 83.7777 88.7777 99 70 99H36V65Z" fill="#2441FF" /><path d="M0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="#2441FF" /><path d="M36 5C36 2.23858 38.2386 0 41 0H101C103.761 0 106 2.23858 106 5V19C106 21.7614 103.761 24 101 24H41C38.2386 24 36 21.7614 36 19V5Z" fill="#2441FF" /><path d="M12 31C18.6274 31 24 36.3726 24 43V89C24 95.6274 18.6274 101 12 101C5.37258 101 0 95.6274 0 89V43C0 36.3726 5.37258 31 12 31Z" fill="#2441FF" /></svg>;
@@ -112,7 +113,7 @@ export function Blunote() {
               </Link>
               <div style={{ padding: '0 20px 24px', display: 'flex', justifyContent: 'center' }}>
                 <a 
-                  href="https://download.nobluue.com/Win-Blunote.Setup.0.1.23_2.exe" 
+                  href={BLUNOTE_DOWNLOADS.windows.url}
                   className="ai-sub" 
                   style={{ 
                     textDecoration: 'none', 
@@ -134,7 +135,7 @@ export function Blunote() {
                   }}
                   download
                 >
-                  Download .exe
+                  {BLUNOTE_DOWNLOADS.windows.label} · v{BLUNOTE_DOWNLOADS.windows.version}
                 </a>
               </div>
             </div>
@@ -146,7 +147,7 @@ export function Blunote() {
               </Link>
               <div style={{ padding: '0 20px 24px', display: 'flex', justifyContent: 'center' }}>
                 <a 
-                  href="https://download.nobluue.com/Blunote-0.1.23-arm64.dmg" 
+                  href={BLUNOTE_DOWNLOADS.macos.url}
                   className="ai-sub" 
                   style={{ 
                     textDecoration: 'none', 
@@ -168,7 +169,7 @@ export function Blunote() {
                   }}
                   download
                 >
-                  Download .dmg
+                  {BLUNOTE_DOWNLOADS.macos.label}
                 </a>
               </div>
             </div>

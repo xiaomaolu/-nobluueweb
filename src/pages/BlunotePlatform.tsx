@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { useAppContext } from '../AppContext';
+import { BLUNOTE_DOWNLOADS } from '../constants/blunoteDownloads';
 import { BLUNOTE_PRIVACY_POLICY, BLUNOTE_TERMS_OF_SERVICE } from '../constants/blunoteLegal';
 
 const ICON_BACK = <svg viewBox="0 0 16 16" style={{ width: '14px', height: '14px', fill: 'currentColor', flexShrink: 0 }}><path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" /></svg>;
@@ -12,10 +13,7 @@ export function BlunotePlatform() {
   const isWindows = platform === 'windows';
   const platformName = isWindows ? 'Windows' : 'macOS';
   const icon = isWindows ? '🪟' : '🍎';
-  const downloadUrl = isWindows 
-    ? "https://download.nobluue.com/Win-Blunote.Setup.0.1.23_2.exe"
-    : "https://download.nobluue.com/Blunote-0.1.23-arm64.dmg";
-  const downloadLabel = isWindows ? "Download .exe" : "Download .dmg";
+  const download = isWindows ? BLUNOTE_DOWNLOADS.windows : BLUNOTE_DOWNLOADS.macos;
 
   const markdownComponents = {
     h1: ({ children }: any) => (
@@ -89,7 +87,7 @@ export function BlunotePlatform() {
           </div>
           
           <a 
-            href={downloadUrl} 
+            href={download.url}
             className="download-btn"
             style={{ 
               textDecoration: 'none', 
@@ -113,7 +111,7 @@ export function BlunotePlatform() {
             }}
             download
           >
-            {downloadLabel}
+            {download.label} · v{download.version}
           </a>
         </div>
 
