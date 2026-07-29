@@ -958,6 +958,111 @@ html.dark .live-indicator { animation: pulse-ring-dark 2s ease-out infinite; }
   text-underline-offset: 3px;
 }
 
+.blunote-download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.blunote-download-card {
+  min-height: 220px;
+  box-sizing: border-box;
+  padding: 24px 20px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr 22px auto;
+  justify-items: center;
+  align-items: end;
+  overflow: hidden;
+}
+
+.blunote-download-platform {
+  width: 100%;
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.blunote-download-platform[href] {
+  border-radius: var(--r-md);
+  transition: background 180ms ease;
+}
+
+.blunote-download-platform[href]:hover {
+  background: var(--blue-soft);
+}
+
+.blunote-download-icon {
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.blunote-download-title {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.blunote-download-version {
+  color: var(--text3);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.blunote-download-action {
+  width: 100%;
+  min-height: 38px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 9px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.blunote-download-action:hover {
+  background: var(--blue);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.blunote-download-action:focus-visible,
+.blunote-download-platform:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 620px) {
+  .blunote-download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blunote-download-card {
+    min-height: 190px;
+  }
+}
+
 html.dark .blunote-drive-purpose {
   border-color: rgba(94, 117, 255, 0.22);
   background: rgba(36, 65, 255, 0.11);
@@ -1179,4 +1284,3 @@ html.dark .stock-logo-wrap svg [fill="#1d1d1f"] { fill:#e0e0e0; }
   75% { transform: perspective(600px) rotateX(0.5deg) rotateY(-0.5deg) scale(1.01); }
   100% { transform: perspective(600px) rotateX(0deg) rotateY(0deg) scale(1); }
 }
-

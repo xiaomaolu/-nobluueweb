@@ -105,95 +105,48 @@ export function Blunote() {
 
         <div className="d-card">
           <div className="label">{t('Downloads', '软件下载')}</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
-            <div className="ai-item" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-              <Link to="/blunote/windows" style={{ textDecoration: 'none', padding: '24px 20px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', width: '100%', boxSizing: 'border-box' }}>
-                <span style={{ fontSize: '32px' }}>🪟</span>
-                <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '15px' }}>Windows</span>
+          <div className="blunote-download-grid">
+            <div className="ai-item blunote-download-card">
+              <Link className="blunote-download-platform" to="/blunote/windows">
+                <span className="blunote-download-icon" aria-hidden="true">🪟</span>
+                <span className="blunote-download-title">Windows</span>
               </Link>
-              <div style={{ padding: '0 20px 24px', display: 'flex', justifyContent: 'center' }}>
-                <a 
-                  href={BLUNOTE_DOWNLOADS.windows.url}
-                  className="ai-sub" 
-                  style={{ 
-                    textDecoration: 'none', 
-                    padding: '8px 20px', 
-                    background: 'var(--blue-soft)', 
-                    color: 'var(--blue)', 
-                    borderRadius: '8px',
-                    fontSize: '12px',
-                    fontWeight: 500,
-                    transition: 'all 0.2s'
-                  }} 
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = 'var(--blue)';
-                    e.currentTarget.style.color = 'white';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = 'var(--blue-soft)';
-                    e.currentTarget.style.color = 'var(--blue)';
-                  }}
-                  download
-                >
-                  {BLUNOTE_DOWNLOADS.windows.label} · v{BLUNOTE_DOWNLOADS.windows.version}
-                </a>
-              </div>
+              <span className="blunote-download-version">v{BLUNOTE_DOWNLOADS.windows.version}</span>
+              <a
+                href={BLUNOTE_DOWNLOADS.windows.url}
+                className="blunote-download-action"
+                download
+              >
+                {BLUNOTE_DOWNLOADS.windows.label}
+              </a>
             </div>
 
-            <div className="ai-item" style={{ padding: '0', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-              <Link to="/blunote/macos" style={{ textDecoration: 'none', padding: '24px 20px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', width: '100%', boxSizing: 'border-box' }}>
-                <span style={{ fontSize: '32px' }}>🍎</span>
-                <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '15px' }}>macOS</span>
+            <div className="ai-item blunote-download-card">
+              <Link className="blunote-download-platform" to="/blunote/macos">
+                <span className="blunote-download-icon" aria-hidden="true">🍎</span>
+                <span className="blunote-download-title">macOS</span>
               </Link>
-              <div style={{ padding: '0 20px 24px', display: 'flex', justifyContent: 'center' }}>
-                <a 
-                  href={BLUNOTE_DOWNLOADS.macos.url}
-                  className="ai-sub" 
-                  style={{ 
-                    textDecoration: 'none', 
-                    padding: '8px 20px', 
-                    background: 'var(--blue-soft)', 
-                    color: 'var(--blue)', 
-                    borderRadius: '8px',
-                    fontSize: '12px',
-                    fontWeight: 500,
-                    transition: 'all 0.2s'
-                  }} 
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = 'var(--blue)';
-                    e.currentTarget.style.color = 'white';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = 'var(--blue-soft)';
-                    e.currentTarget.style.color = 'var(--blue)';
-                  }}
-                  download
-                >
-                  {BLUNOTE_DOWNLOADS.macos.label}
-                </a>
-              </div>
+              <span className="blunote-download-version">v{BLUNOTE_DOWNLOADS.macos.version}</span>
+              <a
+                href={BLUNOTE_DOWNLOADS.macos.url}
+                className="blunote-download-action"
+                download
+              >
+                {BLUNOTE_DOWNLOADS.macos.label}
+              </a>
             </div>
 
-            <div className="ai-item" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
-              <span style={{ fontSize: '24px' }}>📱</span>
-              <span className="ai-name" style={{ color: 'var(--blue)', fontWeight: 600 }}>iOS</span>
-              <a 
-                href="https://apps.apple.com/us/app/blunote/id6761996337" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="ai-sub" 
-                style={{ 
-                  textDecoration: 'none', 
-                  padding: '6px 16px', 
-                  background: 'var(--blue-soft)', 
-                  color: 'var(--blue)', 
-                  borderRadius: '6px',
-                  fontSize: '11px',
-                  fontWeight: 500,
-                  transition: 'opacity 0.2s'
-                }} 
-                onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+            <div className="ai-item blunote-download-card">
+              <div className="blunote-download-platform">
+                <span className="blunote-download-icon" aria-hidden="true">📱</span>
+                <span className="blunote-download-title">iOS</span>
+              </div>
+              <span className="blunote-download-version">{t('iPhone & iPad', 'iPhone 与 iPad')}</span>
+              <a
+                href="https://apps.apple.com/us/app/blunote/id6761996337"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="blunote-download-action"
               >
                 App Store
               </a>
