@@ -1,7 +1,7 @@
 export const BLUNOTE_DOWNLOADS = {
   windows: {
-    version: '0.1.50',
-    url: 'https://github.com/xiaomaolu/blunote-updates/releases/download/v0.1.50/Blunote-Setup-0.1.50.exe',
+    version: '0.1.51',
+    url: 'https://github.com/xiaomaolu/blunote-updates/releases/download/v0.1.51/Blunote-Setup-0.1.51.exe',
     label: 'Download .exe',
   },
   macos: {
