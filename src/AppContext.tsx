@@ -22,7 +22,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     } catch (e) {
       console.warn('localStorage access denied');
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'sunlit';
   });
 
   const [language, setLanguageState] = useState<Language>(() => {
