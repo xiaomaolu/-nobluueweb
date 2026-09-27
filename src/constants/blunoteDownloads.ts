@@ -5,8 +5,8 @@ export const BLUNOTE_DOWNLOADS = {
     label: 'Download .exe',
   },
   macos: {
-    version: '0.1.23',
-    url: 'https://download.nobluue.com/Blunote-0.1.23-arm64.dmg',
+    version: '0.1.51',
+    url: 'https://download.nobluue.com/Blunote-0.1.51-arm64.dmg',
     label: 'Download .dmg',
   },
 } as const;
