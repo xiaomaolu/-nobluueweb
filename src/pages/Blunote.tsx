@@ -67,8 +67,8 @@ export function Blunote() {
         <div className="d-hero">
           <div className="d-hero-icon" style={{ background: 'rgba(36,65,255,0.08)', padding: '12px', borderRadius: '16px' }}>{ICON_BLUNOTE}</div>
           <div>
-            <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: '4px' }}>Silent Digital Garden</div>
-            <h1 className="d-hero-title" style={{ fontFamily: "'Lora', serif", fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, lineHeight: 1.2, color: 'var(--text)', letterSpacing: '-0.01em', margin: '0 0 6px' }}>Blunote</h1>
+            <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.02em', color: 'var(--text3)', marginBottom: '4px' }}>Silent Digital Garden</div>
+            <h1 className="d-hero-title" style={{ fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, lineHeight: 1.2, color: 'var(--text)', letterSpacing: '-0.01em', margin: '0 0 6px' }}>Blunote</h1>
             <div className="d-hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--blue)', background: 'var(--blue-soft)', borderRadius: '20px', padding: '2px 9px' }}>
               <span className="d-live-dot" style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--green)' }}></span>
               Local-first · Privacy Focused · Multi-platform

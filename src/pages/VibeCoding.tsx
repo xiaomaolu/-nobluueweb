@@ -27,7 +27,7 @@ export function VibeCoding() {
           <div className="d-hero-icon">{ICON_NOTION}</div>
           <div>
             <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', color: 'var(--text3)', marginBottom: '4px' }}>Vibe Coding</div>
-            <div className="d-hero-title" style={{ fontFamily: "'Lora', serif", fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', marginBottom: '6px' }}>Notion Website Clipper</div>
+            <div className="d-hero-title" style={{ fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', marginBottom: '6px' }}>Notion Website Clipper</div>
             <div className="d-hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--blue)', background: 'var(--blue-soft)', borderRadius: '20px', padding: '2px 9px' }}>
               <span className="d-live-dot" style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--green)' }}></span>
               Chrome extension · Notion Integration
@@ -73,7 +73,7 @@ export function VibeCoding() {
         <div className="d-card">
           <div className="label">Privacy Policy</div>
           <div className="privacy" style={{ fontSize: '11.5px', color: 'var(--text3)', lineHeight: 1.75 }}>
-            <div className="privacy-eff" style={{ fontSize: '10px', color: 'var(--text3)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '14px' }}>Effective date: 1 March 2026</div>
+            <div className="privacy-eff" style={{ fontSize: '11px', color: 'var(--text3)', letterSpacing: '0.02em', marginBottom: '14px' }}>Effective date: 1 March 2026</div>
             <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '0 0 5px' }}>1. What this Extension does</h3>
             <p style={{ marginBottom: '5px' }}>A Notion‑integrated Chrome extension that captures web content and covers from the pages you visit and sends them to your own Notion database via the official Notion API.</p>
             <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>2. Data we access and process</h3>

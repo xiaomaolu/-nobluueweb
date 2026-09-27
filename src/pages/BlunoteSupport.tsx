@@ -27,8 +27,8 @@ export function BlunoteSupport() {
             {t('If you encounter any issues or have questions regarding Blunote, please feel free to reach out to our support team.', '如果您在使用 Blunote 过程中遇到任何问题或有任何疑问，请随时联系我们的支持团队。')}
           </p>
           
-          <div style={{ padding: '20px', background: 'var(--glass)', borderRadius: '12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ fontSize: '12px', color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t('Contact Email', '联系邮箱')}</div>
+          <div style={{ padding: '20px 0', borderTop: '1px solid var(--border-h)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ fontSize: '12px', color: 'var(--text3)', letterSpacing: '0.02em' }}>{t('Contact Email', '联系邮箱')}</div>
             <a href="mailto:note@nobluue.com" style={{ fontSize: '18px', fontWeight: 500, color: 'var(--blue)', textDecoration: 'none' }}>
               note@nobluue.com
             </a>
