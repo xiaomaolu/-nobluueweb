@@ -149,6 +149,21 @@ export function Home() {
                   <span className="ai-sub">{t('Bookmark Canvas', '书签画布')}</span>
                 </Link>
               </div>
+              <nav className="ai-tools-nav" aria-label={t('Creative tools', '创作工具')}>
+                <a className="ai-tools-link" href="https://icon.nobluue.com/" target="_blank" rel="noopener noreferrer">
+                  <span className="ai-tools-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                      <path d="M14 17.5h7m-3.5-3.5v7" />
+                    </svg>
+                  </span>
+                  <span className="ai-tools-name">{t('Icon Library', '图标库')}</span>
+                  <span className="ai-tools-detail">{t('200 line · 109 duotone', '200 线性 · 109 双色')}</span>
+                  <span className="ai-tools-arrow" aria-hidden="true">↗</span>
+                </a>
+              </nav>
             </div>
 
             {/* Digital Life */}
