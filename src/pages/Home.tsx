@@ -59,7 +59,7 @@ export function Home() {
           <div className="stack">
             {/* About */}
             <div className="card animate-rise-1">
-              <div className="label">{t('About', '关于')}</div>
+              <div className="label label--section">{t('About', '关于')}</div>
               <div className="bio">
                 <p className="bio-intro" dangerouslySetInnerHTML={{ __html: t('No agenda / <strong>web3</strong> and <strong>AI</strong>', '没有目的 / <strong>web3</strong> 和 <strong>AI</strong>') }} />
                 <div className="manifesto">
@@ -86,7 +86,7 @@ export function Home() {
 
             {/* AI Life */}
             <div className="card animate-rise-2">
-              <div className="label">
+              <div className="label label--section">
                 AI Life
               </div>
 
@@ -168,23 +168,23 @@ export function Home() {
 
             {/* Digital Life */}
             <div className="card animate-rise-3">
-              <div className="label">{t('Digital Life', '数字生活')}</div>
+              <div className="label label--section">{t('Digital Life', '数字生活')}</div>
               <div className="links">
                 <a className="link-row" href="https://x.com/deepbluue" target="_blank" rel="noopener noreferrer">
                   <span className="link-ico">{ICON_X}</span>
                   <span className="link-body"><span className="link-name">X (Twitter)</span><span className="link-handle">@deepbluue</span></span>
                   <span className="link-arr">›</span>
                 </a>
-                <div className="link-row" style={{ cursor: 'default', alignItems: 'flex-start', paddingBottom: '6px' }}>
-                  <span className="link-ico" style={{ fontSize: '13px', marginTop: '2px' }}>📝</span>
+                <div className="link-row link-row--notes">
+                  <span className="link-ico link-ico--notes">📝</span>
                   <span className="link-body">
-                    <span className="link-name" style={{ marginBottom: '6px', display: 'block' }}>Web3 Notes</span>
-                    <a href="https://nobluue.notion.site/c1f072723a5543c3a17914bbdfa6f6dc?v=afbc4f6168e84acf98058abe00943f61" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '5px', textDecoration: 'none', color: 'var(--text2)', fontSize: '11px', padding: '4px 0', transition: 'color 0.2s' }} onMouseOver={(e) => (e.currentTarget.style.color = 'var(--blue)')} onMouseOut={(e) => (e.currentTarget.style.color = 'var(--text2)')}>
-                      <span style={{ fontSize: '9px', color: 'var(--blue)' }}>▸</span>
+                    <span className="link-name link-name--notes">Web3 Notes</span>
+                    <a className="link-note" href="https://nobluue.notion.site/c1f072723a5543c3a17914bbdfa6f6dc?v=afbc4f6168e84acf98058abe00943f61" target="_blank" rel="noopener noreferrer">
+                      <span className="link-note-bullet" aria-hidden="true">▸</span>
                       {t('Notion Learning Notes', 'Notion 学习记录')}
                     </a>
-                    <a href="https://www.notion.so/beckettal/2175cb8ca2ef80d3bce8da24a97ca5e8?v=2175cb8ca2ef806b98ce000c91edf9f3" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '5px', textDecoration: 'none', color: 'var(--text2)', fontSize: '11px', padding: '4px 0', transition: 'color 0.2s' }} onMouseOver={(e) => (e.currentTarget.style.color = 'var(--blue)')} onMouseOut={(e) => (e.currentTarget.style.color = 'var(--text2)')}>
-                      <span style={{ fontSize: '9px', color: 'var(--blue)' }}>▸</span> AI Reading List
+                    <a className="link-note" href="https://www.notion.so/beckettal/2175cb8ca2ef80d3bce8da24a97ca5e8?v=2175cb8ca2ef806b98ce000c91edf9f3" target="_blank" rel="noopener noreferrer">
+                      <span className="link-note-bullet" aria-hidden="true">▸</span> AI Reading List
                     </a>
                   </span>
                 </div>
@@ -211,7 +211,7 @@ export function Home() {
 
             {/* My Homie — Godot */}
             <div className="card animate-rise-4">
-              <div className="label">{t('My Homie — Godot', '我的搭档 — Godot')}</div>
+              <div className="label label--section">{t('My Homie — Godot', '我的搭档 — Godot')}</div>
               <div className="links">
                 <a className="link-row" href="https://twitter.com/GodotSancho" target="_blank" rel="noopener noreferrer">
                   <span className="link-ico">{ICON_X}</span>
@@ -232,7 +232,7 @@ export function Home() {
 
           {/* Heatmap */}
           <div className="heatmap-card animate-rise-5" style={{ marginTop: '12px' }}>
-            <div className="label">{t('Market Heatmap', '市场热力图')}</div>
+            <div className="label label--section">{t('Market Heatmap', '市场热力图')}</div>
             <CoinHeatmap />
           </div>
 

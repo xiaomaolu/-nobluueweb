@@ -22,79 +22,79 @@ export function VibeCoding() {
         </div>
       </nav>
 
-      <div className="detail-page" style={{ position: 'relative', zIndex: 1, maxWidth: '680px', margin: '0 auto', padding: '36px 20px 80px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div className="detail-page">
         <div className="d-hero">
           <div className="d-hero-icon">{ICON_NOTION}</div>
           <div>
-            <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', color: 'var(--text3)', marginBottom: '4px' }}>Vibe Coding</div>
-            <div className="d-hero-title" style={{ fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', marginBottom: '6px' }}>Notion Website Clipper</div>
-            <div className="d-hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--blue)', background: 'var(--blue-soft)', borderRadius: '20px', padding: '2px 9px' }}>
-              <span className="d-live-dot" style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--green)' }}></span>
+            <div className="d-hero-kicker">Vibe Coding</div>
+            <h1 className="d-hero-title">Notion Website Clipper</h1>
+            <div className="d-hero-badge">
+              <span className="d-live-dot"></span>
               Chrome extension · Notion Integration
             </div>
           </div>
         </div>
 
         <div className="d-card">
-          <div className="label">About</div>
-          <div className="prose" style={{ fontSize: '13px', color: 'var(--text2)', lineHeight: 1.75 }}>
+          <div className="label label--section">About</div>
+          <div className="prose">
             <p>A Notion-integrated Chrome extension designed to capture web content and covers effortlessly.</p>
-            <p style={{ marginTop: '10px' }}>Clip what you read on the web directly into your own Notion database — with smart extraction, auto-tagging, and zero friction.</p>
+            <p>Clip what you read on the web directly into your own Notion database — with smart extraction, auto-tagging, and zero friction.</p>
           </div>
         </div>
 
         <div className="d-card">
-          <div className="label">Key Features</div>
-          <div className="feat-list" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="label label--section">Key Features</div>
+          <div className="feat-list">
             <div className="feat-item">
-              <span className="feat-num" style={{ width: '20px', height: '20px', flexShrink: 0, borderRadius: '6px', background: 'var(--blue-soft)', fontSize: '10px', fontWeight: 500, color: 'var(--blue)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1px' }}>01</span>
+              <span className="feat-num">01</span>
               <div>
-                <div className="feat-title" style={{ fontSize: '12px', fontWeight: 500, color: 'var(--text)', marginBottom: '2px' }}>Smart Extraction</div>
-                <div className="feat-desc" style={{ fontSize: '12px', color: 'var(--text3)', lineHeight: 1.55 }}>Automatically identifies body text and cover images from any page.</div>
+                <div className="feat-title">Smart Extraction</div>
+                <div className="feat-desc">Automatically identifies body text and cover images from any page.</div>
               </div>
             </div>
             <div className="feat-item">
-              <span className="feat-num" style={{ width: '20px', height: '20px', flexShrink: 0, borderRadius: '6px', background: 'var(--blue-soft)', fontSize: '10px', fontWeight: 500, color: 'var(--blue)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1px' }}>02</span>
+              <span className="feat-num">02</span>
               <div>
-                <div className="feat-title" style={{ fontSize: '12px', fontWeight: 500, color: 'var(--text)', marginBottom: '2px' }}>Auto-Processing</div>
-                <div className="feat-desc" style={{ fontSize: '12px', color: 'var(--text3)', lineHeight: 1.55 }}>Supports auto-tagging and text recognition out of the box.</div>
+                <div className="feat-title">Auto-Processing</div>
+                <div className="feat-desc">Supports auto-tagging and text recognition out of the box.</div>
               </div>
             </div>
             <div className="feat-item">
-              <span className="feat-num" style={{ width: '20px', height: '20px', flexShrink: 0, borderRadius: '6px', background: 'var(--blue-soft)', fontSize: '10px', fontWeight: 500, color: 'var(--blue)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1px' }}>03</span>
+              <span className="feat-num">03</span>
               <div>
-                <div className="feat-title" style={{ fontSize: '12px', fontWeight: 500, color: 'var(--text)', marginBottom: '2px' }}>Customizable</div>
-                <div className="feat-desc" style={{ fontSize: '12px', color: 'var(--text3)', lineHeight: 1.55 }}>Easily configure your own Notion API integration and target database.</div>
+                <div className="feat-title">Customizable</div>
+                <div className="feat-desc">Easily configure your own Notion API integration and target database.</div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="d-card">
-          <div className="label">Privacy Policy</div>
-          <div className="privacy" style={{ fontSize: '11.5px', color: 'var(--text3)', lineHeight: 1.75 }}>
-            <div className="privacy-eff" style={{ fontSize: '11px', color: 'var(--text3)', letterSpacing: '0.02em', marginBottom: '14px' }}>Effective date: 1 March 2026</div>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '0 0 5px' }}>1. What this Extension does</h3>
-            <p style={{ marginBottom: '5px' }}>A Notion‑integrated Chrome extension that captures web content and covers from the pages you visit and sends them to your own Notion database via the official Notion API.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>2. Data we access and process</h3>
-            <p style={{ marginBottom: '5px' }}><strong style={{ color: 'var(--text2)' }}>Web page content</strong> — selected text, page title, URL, and detected cover images.</p>
-            <p style={{ marginBottom: '5px' }}><strong style={{ color: 'var(--text2)' }}>Notion metadata</strong> — your target database ID and name, and any user‑defined tags you configure.</p>
-            <p style={{ marginBottom: '5px' }}><strong style={{ color: 'var(--text2)' }}>Configuration data</strong> — your Notion integration token/API key, database IDs, and extension settings.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>3. Local storage — no developer server</h3>
-            <p style={{ marginBottom: '5px' }}>All configuration data is stored locally in your browser via Chrome extension storage APIs. The Extension does not send your data to any server controlled by the developer. The only remote destination is the Notion API endpoint you configure.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>4. How data is shared</h3>
-            <p style={{ marginBottom: '5px' }}>The Extension does not sell or rent your data. Data is transferred only to Notion for the core functionality of saving content to your workspace. Data is not used for unrelated purposes or to determine creditworthiness.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>5. Permissions</h3>
-            <p style={{ marginBottom: '5px' }}><strong style={{ color: 'var(--text2)' }}>Active tab / host URLs</strong> — to read the page title, URL, body text, and images you choose to save.</p>
-            <p style={{ marginBottom: '5px' }}><strong style={{ color: 'var(--text2)' }}>Storage</strong> — to save your configuration locally in the browser.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>6. Your choices and control</h3>
-            <p style={{ marginBottom: '5px' }}>You can disable or uninstall the Extension at any time from your browser's extension settings. To manage content in Notion, use Notion's own interface.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>7. Children's privacy</h3>
-            <p style={{ marginBottom: '5px' }}>This Extension is intended for general productivity use and is not directed to children under 13.</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>8. Changes to this policy</h3>
-            <p style={{ marginBottom: '5px' }}>Changes will be reflected on this page with an updated "Effective date."</p>
-            <h3 style={{ fontSize: '11.5px', fontWeight: 600, color: 'var(--text2)', margin: '16px 0 5px' }}>9. Contact</h3>
-            <p style={{ marginBottom: '5px' }}>Questions? Email: <a href="mailto:web3@nobluue.com" style={{ color: 'var(--blue)', textDecoration: 'none' }}>web3@nobluue.com</a></p>
+          <div className="label label--section">Privacy Policy</div>
+          <div className="privacy">
+            <div className="privacy-eff">Effective date: 1 March 2026</div>
+            <h3>1. What this Extension does</h3>
+            <p>A Notion‑integrated Chrome extension that captures web content and covers from the pages you visit and sends them to your own Notion database via the official Notion API.</p>
+            <h3>2. Data we access and process</h3>
+            <p><strong style={{ color: 'var(--text2)' }}>Web page content</strong> — selected text, page title, URL, and detected cover images.</p>
+            <p><strong style={{ color: 'var(--text2)' }}>Notion metadata</strong> — your target database ID and name, and any user‑defined tags you configure.</p>
+            <p><strong style={{ color: 'var(--text2)' }}>Configuration data</strong> — your Notion integration token/API key, database IDs, and extension settings.</p>
+            <h3>3. Local storage — no developer server</h3>
+            <p>All configuration data is stored locally in your browser via Chrome extension storage APIs. The Extension does not send your data to any server controlled by the developer. The only remote destination is the Notion API endpoint you configure.</p>
+            <h3>4. How data is shared</h3>
+            <p>The Extension does not sell or rent your data. Data is transferred only to Notion for the core functionality of saving content to your workspace. Data is not used for unrelated purposes or to determine creditworthiness.</p>
+            <h3>5. Permissions</h3>
+            <p><strong style={{ color: 'var(--text2)' }}>Active tab / host URLs</strong> — to read the page title, URL, body text, and images you choose to save.</p>
+            <p><strong style={{ color: 'var(--text2)' }}>Storage</strong> — to save your configuration locally in the browser.</p>
+            <h3>6. Your choices and control</h3>
+            <p>You can disable or uninstall the Extension at any time from your browser's extension settings. To manage content in Notion, use Notion's own interface.</p>
+            <h3>7. Children's privacy</h3>
+            <p>This Extension is intended for general productivity use and is not directed to children under 13.</p>
+            <h3>8. Changes to this policy</h3>
+            <p>Changes will be reflected on this page with an updated "Effective date."</p>
+            <h3>9. Contact</h3>
+            <p>Questions? Email: <a href="mailto:web3@nobluue.com" style={{ color: 'var(--blue)', textDecoration: 'none' }}>web3@nobluue.com</a></p>
           </div>
         </div>
 

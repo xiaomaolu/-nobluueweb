@@ -20,16 +20,16 @@ export function BlunoteSupport() {
         </div>
       </nav>
 
-      <div className="detail-page" style={{ position: 'relative', zIndex: 1, maxWidth: '680px', margin: '0 auto', padding: '36px 20px 80px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        <div className="d-card" style={{ padding: '32px 24px' }}>
-          <h1 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--text)', marginBottom: '16px' }}>Blunote Support</h1>
-          <p style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.6, marginBottom: '24px' }}>
+      <div className="detail-page">
+        <div className="d-card">
+          <h1 className="d-hero-title">Blunote Support</h1>
+          <p className="support-intro">
             {t('If you encounter any issues or have questions regarding Blunote, please feel free to reach out to our support team.', '如果您在使用 Blunote 过程中遇到任何问题或有任何疑问，请随时联系我们的支持团队。')}
           </p>
           
-          <div style={{ padding: '20px 0', borderTop: '1px solid var(--border-h)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ fontSize: '12px', color: 'var(--text3)', letterSpacing: '0.02em' }}>{t('Contact Email', '联系邮箱')}</div>
-            <a href="mailto:note@nobluue.com" style={{ fontSize: '18px', fontWeight: 500, color: 'var(--blue)', textDecoration: 'none' }}>
+          <div className="support-contact">
+            <div className="support-contact-label">{t('Contact Email', '联系邮箱')}</div>
+            <a className="support-contact-email" href="mailto:note@nobluue.com">
               note@nobluue.com
             </a>
           </div>

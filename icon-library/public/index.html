@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>200 线性图标库 · Line Icons</title>
 <style>
+  :root { --icon-title:24px; --icon-section:17px; --icon-item:13px; --icon-body:14px;
+          --icon-secondary:12px; --icon-meta:11px; --icon-space:12px; --icon-gutter:24px; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:#101216; color:#e8eaf0; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
-         padding-left:64px; }
+         padding-left:64px; font-size:var(--icon-body); line-height:1.5; }
   #rail { position:fixed; left:0; top:0; bottom:0; width:64px; background:#0b0d11; z-index:30;
           border-right:1px solid #23262e; display:flex; flex-direction:column; align-items:center;
           padding-top:22px; gap:10px; }
@@ -22,35 +24,35 @@
   .rail-tip { margin-top:auto; margin-bottom:16px; writing-mode:vertical-rl; font-size:10px;
               color:#4a4f5c; letter-spacing:2px; }
   header { position:sticky; top:0; z-index:10; background:rgba(16,18,22,.92); backdrop-filter:blur(10px);
-           border-bottom:1px solid #23262e; padding:18px 24px 14px; }
-  .top { max-width:1200px; margin:0 auto; }
-  h1 { font-size:22px; font-weight:700; letter-spacing:.5px; }
+           border-bottom:1px solid #23262e; padding:18px var(--icon-gutter) 14px; }
+  .top { max-width:1152px; margin:0 auto; }
+  h1 { font-size:var(--icon-title); font-weight:700; letter-spacing:-.02em; line-height:1.25; }
   h1 .badge { display:inline-block; background:#fff; color:#101216; font-size:12px; border-radius:20px;
               padding:2px 10px; margin-left:10px; vertical-align:middle; }
-  .sub { color:#9aa0ad; font-size:13px; margin-top:6px; }
+  .sub { color:#9aa0ad; font-size:var(--icon-secondary); margin-top:6px; }
   .sub code { background:#1c1f27; padding:1px 6px; border-radius:4px; font-size:12px; color:#c9cedb; }
   .search { margin-top:12px; }
   .search input { width:100%; max-width:420px; background:#1a1d24; border:1px solid #2a2e38; color:#fff;
                   border-radius:10px; padding:10px 14px; font-size:14px; outline:none; }
   .search input:focus { border-color:#5b8cff; }
-  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-  .chip { color:#c9cedb; text-decoration:none; font-size:12.5px; background:#1a1d24; border:1px solid #2a2e38;
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:var(--icon-space); }
+  .chip { color:#c9cedb; text-decoration:none; font-size:var(--icon-secondary); background:#1a1d24; border:1px solid #2a2e38;
            padding:6px 12px; border-radius:20px; transition:.15s; }
   .chip:hover { border-color:#5b8cff; color:#fff; }
   .chip span { color:#7c8494; margin-left:6px; font-size:11px; }
-  main { max-width:1200px; margin:0 auto; padding:8px 24px 80px; }
-  section { margin-top:34px; }
-  section h2 { font-size:17px; margin-bottom:14px; display:flex; align-items:center; gap:10px; scroll-margin-top:170px; }
+  main { max-width:1200px; margin:0 auto; padding:8px var(--icon-gutter) 80px; }
+  section { margin-top:32px; }
+  section h2 { font-size:var(--icon-section); margin-bottom:var(--icon-space); display:flex; align-items:center; gap:8px; scroll-margin-top:170px; }
   section h2 .count { font-size:11px; color:#7c8494; background:transparent; border:0;
                       border-radius:12px; padding:2px 9px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(118px,1fr)); gap:10px; }
-  .card { background:transparent; border:1px solid transparent; border-radius:12px; padding:18px 8px 12px;
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(118px,1fr)); gap:var(--icon-space); }
+  .card { background:transparent; border:1px solid transparent; border-radius:12px; padding:16px 8px 12px;
           text-align:center; cursor:pointer; transition:.15s; }
   .card:hover { border-color:#5b8cff; transform:translateY(-2px); background:#1a1e28; }
   .card:active { transform:scale(.97); }
   .glyph svg { width:44px; height:44px; }
-  .nm { font-size:13px; margin-top:10px; color:#e8eaf0; }
-  .en { font-size:10.5px; color:#7c8494; margin-top:3px; font-family:ui-monospace,monospace; }
+  .nm { font-size:var(--icon-item); margin-top:8px; color:#e8eaf0; font-weight:600; line-height:1.35; }
+  .en { font-size:var(--icon-meta); color:#7c8494; margin-top:3px; font-family:ui-monospace,monospace; line-height:1.4; }
   .empty { display:none; text-align:center; color:#7c8494; padding:60px 0; font-size:14px; }
   #toast { position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px);
            background:#fff; color:#101216; font-size:13.5px; padding:10px 20px; border-radius:10px;

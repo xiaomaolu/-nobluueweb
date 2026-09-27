@@ -63,14 +63,14 @@ export function Blunote() {
         </div>
       </nav>
 
-      <div className="detail-page" style={{ position: 'relative', zIndex: 1, maxWidth: '680px', margin: '0 auto', padding: '36px 20px 80px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div className="detail-page">
         <div className="d-hero">
           <div className="d-hero-icon" style={{ background: 'rgba(36,65,255,0.08)', padding: '12px', borderRadius: '16px' }}>{ICON_BLUNOTE}</div>
           <div>
-            <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.02em', color: 'var(--text3)', marginBottom: '4px' }}>Silent Digital Garden</div>
-            <h1 className="d-hero-title" style={{ fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 600, lineHeight: 1.2, color: 'var(--text)', letterSpacing: '-0.01em', margin: '0 0 6px' }}>Blunote</h1>
-            <div className="d-hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--blue)', background: 'var(--blue-soft)', borderRadius: '20px', padding: '2px 9px' }}>
-              <span className="d-live-dot" style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--green)' }}></span>
+            <div className="d-hero-kicker">Silent Digital Garden</div>
+            <h1 className="d-hero-title">Blunote</h1>
+            <div className="d-hero-badge">
+              <span className="d-live-dot"></span>
               Local-first · Privacy Focused · Multi-platform
             </div>
           </div>
@@ -104,7 +104,7 @@ export function Blunote() {
         </section>
 
         <div className="d-card">
-          <div className="label">{t('Downloads', '软件下载')}</div>
+          <div className="label label--section">{t('Downloads', '软件下载')}</div>
           <div className="blunote-download-grid">
             <div className="ai-item blunote-download-card">
               <Link className="blunote-download-platform" to="/blunote/windows">
@@ -152,77 +152,77 @@ export function Blunote() {
               </a>
             </div>
           </div>
-          <p style={{ fontSize: '11px', color: 'var(--text3)', marginTop: '16px', textAlign: 'center' }}>
+          <p className="download-note">
             {t('More platforms coming soon.', '更多平台即将推出。')}
           </p>
         </div>
 
         <div className="d-card">
-          <div className="label">{t('Support', '技术支持')}</div>
-          <Link to="/blunote/support" className="ai-item" style={{ textDecoration: 'none', padding: '12px', display: 'flex', alignItems: 'center', gap: '12px', width: '100%', boxSizing: 'border-box' }}>
+          <div className="label label--section">{t('Support', '技术支持')}</div>
+          <Link to="/blunote/support" className="support-link">
             <span style={{ fontSize: '18px' }}>💬</span>
             <div style={{ textAlign: 'left' }}>
               <div className="ai-name" style={{ marginBottom: '2px' }}>Blunote Support</div>
               <div className="ai-sub">note@nobluue.com</div>
             </div>
-            <span style={{ marginLeft: 'auto', color: 'var(--text3)', fontSize: '14px' }}>›</span>
+            <span className="support-link-arrow" aria-hidden="true">›</span>
           </Link>
         </div>
 
         <div className="d-card" id="privacy-policy">
           <div className="label">{t('Privacy Policy', '隐私政策')}</div>
-          <div className="privacy" style={{ fontSize: '12px', color: 'var(--text2)', lineHeight: 1.7 }}>
+          <div className="privacy">
             {language === 'en' ? (
               <div key="en-policy">
-                <h3 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text)', marginBottom: '12px' }}>Blunote Privacy Policy</h3>
+                <h3>Blunote Privacy Policy</h3>
                 <p style={{ color: 'var(--text3)', fontStyle: 'italic', marginBottom: '16px' }}>Blunote is designed with a local-first approach.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>Information You Store</h4>
+                <h4>Information You Store</h4>
                 <p>Blunote allows you to create and store notes, documents, and related content. Your note content is primarily stored locally on your device.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>iCloud Sync</h4>
+                <h4>iCloud Sync</h4>
                 <p>If you use sync features, your content may be synced through Apple iCloud so it can be available across your Apple devices.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>Custom AI APIs</h4>
+                <h4>Custom AI APIs</h4>
                 <p>Blunote may allow you to connect your own custom AI API. When you use these features, content you choose to process may be sent to the API provider you configure. Blunote does not control the privacy practices of third-party AI providers you choose to use.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>Data Collection</h4>
+                <h4>Data Collection</h4>
                 <p>Blunote does not sell your personal data. We may receive limited technical information if you contact support directly.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>Data Deletion</h4>
+                <h4>Data Deletion</h4>
                 <p>You can delete your notes inside the app at any time. If you use iCloud sync, data stored in iCloud is subject to Apple’s iCloud services and settings.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>Third-Party Services</h4>
+                <h4>Third-Party Services</h4>
                 <p>Blunote may rely on Apple services such as iCloud. If you use custom AI APIs, your use of those services is also subject to the privacy policy of the provider you choose.</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>Contact</h4>
+                <h4>Contact</h4>
                 <p>If you have questions about this Privacy Policy, contact:<br />
                 <a href="mailto:note@nobluue.com" style={{ color: 'var(--blue)', textDecoration: 'none' }}>note@nobluue.com</a></p>
               </div>
             ) : (
               <div key="cn-policy">
-                <h3 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text)', marginBottom: '12px' }}>Blunote 隐私政策</h3>
+                <h3>Blunote 隐私政策</h3>
                 <p style={{ color: 'var(--text3)', fontStyle: 'italic', marginBottom: '16px' }}>Blunote 采用本地优先的设计思路。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>你存储的内容</h4>
+                <h4>你存储的内容</h4>
                 <p>Blunote 允许你创建和保存笔记、文档及相关内容。你的笔记内容默认主要保存在本地设备中。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>iCloud 同步</h4>
+                <h4>iCloud 同步</h4>
                 <p>如果你使用同步功能，相关内容可能会通过 Apple iCloud 在你的 Apple 设备之间进行同步。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>自定义 AI API</h4>
+                <h4>自定义 AI API</h4>
                 <p>Blunote 支持接入用户自定义的 AI API。当你使用相关功能时，你选择处理的内容可能会发送到你自行配置的 API 服务商。对于你自行选择的第三方 AI 服务，其隐私政策与数据处理方式由对应服务商负责。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>数据收集</h4>
+                <h4>数据收集</h4>
                 <p>Blunote 不会出售你的个人数据。如果你主动通过邮件联系支持，我们可能会收到你提供的设备信息、问题描述及相关反馈内容。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>数据删除</h4>
+                <h4>数据删除</h4>
                 <p>你可以随时在 App 内删除自己的笔记内容。如果你启用了 iCloud 同步，存储在 iCloud 中的数据同时受 Apple iCloud 服务与设置管理。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>第三方服务</h4>
+                <h4>第三方服务</h4>
                 <p>Blunote 可能依赖 Apple 提供的服务，例如 iCloud。如果你启用了自定义 AI API，相关数据处理还将受到你所选服务商隐私政策的约束。</p>
                 
-                <h4 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', marginTop: '20px', marginBottom: '4px' }}>联系方式</h4>
+                <h4>联系方式</h4>
                 <p>如对本隐私政策有任何疑问，请联系：<br />
                 <a href="mailto:note@nobluue.com" style={{ color: 'var(--blue)', textDecoration: 'none' }}>note@nobluue.com</a></p>
               </div>

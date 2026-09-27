@@ -163,7 +163,7 @@ export function Catmark() {
         </section>
 
         <section className="d-card" aria-labelledby="catmark-features-title">
-          <div className="label" id="catmark-features-title">{t('What you can do', '你可以做什么')}</div>
+          <div className="label label--section" id="catmark-features-title">{t('What you can do', '你可以做什么')}</div>
           <div className="catmark-feature-list">
             {FEATURES.map((feature) => (
               <article className="feat-item catmark-feature" key={feature.number}>
@@ -178,7 +178,7 @@ export function Catmark() {
         </section>
 
         <section className="d-card" aria-labelledby="catmark-steps-title">
-          <div className="label" id="catmark-steps-title">{t('A simple flow', '简单的使用流程')}</div>
+          <div className="label label--section" id="catmark-steps-title">{t('A simple flow', '简单的使用流程')}</div>
           <ol className="catmark-steps">
             {STEPS.map((step) => (
               <li key={step.number}>
